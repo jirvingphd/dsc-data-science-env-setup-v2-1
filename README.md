@@ -48,7 +48,7 @@ Then to create the environment, on a mac, type `conda env create -f environment.
 
 <img src='http://curriculum-content.s3.amazonaws.com/data-science/screen-47.png' width="750">
 
-Next, try activating the environment. Whether you're on a Mac or using git bash on a windows machine, type `conda activate learn-env` (if you have an issue with running git bash, the command to activate Conda within the Conda shell on windows is `activate learn-env`).
+Next, try activating the environment. If you're on a Mac type `conda activate learn-env`, if you are on windows type `source activate learn-env`.
 
 To confirm that it worked, type `conda info --envs` and confirm that the output in the terminal ends with /learn-env - e.g. *  /Users/peterbell/anaconda3/envs/learn-env
 
@@ -69,7 +69,7 @@ On a Mac, run `echo "conda activate learn-env" >> ~/.bash_profile` to add the co
 <details>
 <summary>Windows</summary>
 To follow these instructions on a Windows machine you must be using the Git Bash shell it was suggested to install above.
-Run `touch ~/.bash_profile` to create a new file. Next, run `echo "conda activate learn-env" >> ~/.bash_profile` to add the configuration to your bash profile and then run `source ~/.bash_profile` to activate the changes you just made.
+Run `touch ~/.bash_profile` to create a new file. Next, run `echo "source activate learn-env" >> ~/.bash_profile` to add the configuration to your bash profile and then run `source ~/.bash_profile` to activate the changes you just made.
 </details>
 
 ## Updating your Virtual Environment
@@ -91,7 +91,7 @@ conda env create -f windows.yml
 
 Jupyter Notebooks run "kernels" - the computational engine used for executing your code. It's important to be running the right kernel within your notebook, otherwise you may get errors stating that you don't have a particular package or have the wrong version of it or even complaints about the version of Python you're running (some packages that work with Python 3.6.6 don't currently support Python 3.7, for example).
 
-It is essential to run `conda activate learn-env` (if you have an issue with running git bash, the command to activate Conda within the Conda shell on windows is `activate learn-env`) every time you start a new terminal window that you are going to use to either run a Jupyter Notebook or your tests. If you don't do this you **will** get errors, so please check this first. If you are not sure whether you have activated the environment, in the terminal type `conda list -f obscure` and it should show you that you have v1.0.1 of the "obscure" package. If it doesn't show that, (re)run (`conda`) `activate learn-env`.
+It is essential to run `conda activate learn-env` on Mac or  `source activate learn-env` on windows every time you start a new terminal window that you are going to use to either run a Jupyter Notebook or your tests. If you don't do this you **will** get errors, so please check this first. If you are not sure whether you have activated the environment, in the terminal type `conda list -f obscure` and it should show you that you have v1.0.1 of the "obscure" package. If it doesn't show that, (re)run (`conda`) `activate learn-env`.
 
 However, there is one more step you need to perform. Firstly you need to ensure your terminal is running the learn-env virtual environment so you have the necessary packages. Then you need to go into your Jupyter Notebook and when viewing a notebook, click on "Kernel" in the top bar, then "Change Kernel" and then pick the learn-env kernel. You must make sure you're running the learn-env kernel whenever you're working in a Jupyter Notebook.
 
